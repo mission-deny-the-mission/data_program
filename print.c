@@ -4,8 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 
-void
-display_record(struct table *table_given, int record_num) {
+void display_record(struct table *table_given, int record_num) {
     int i;
     printf("\nDisplaying record %d:", record_num);
     for (i = 0; i < table_given->num_str; i++) {
@@ -30,8 +29,7 @@ display_record(struct table *table_given, int record_num) {
     }
 }
 
-void
-search_str(struct table *table_given, int field_num) {
+void search_str(struct table *table_given, int field_num) {
     struct str_field *field = table_given->stringfields[field_num];
     int i;
     char value_to_search[128];
@@ -45,8 +43,7 @@ search_str(struct table *table_given, int field_num) {
     }
 }
 
-void
-search_int(struct table *table_given, int field_num) {
+void search_int(struct table *table_given, int field_num) {
     struct int_field *field = table_given->intergerfields[field_num];
     int i;
     int value_to_search;
@@ -60,8 +57,7 @@ search_int(struct table *table_given, int field_num) {
     }
 }
 
-void
-search_bool(struct table *table_given, int field_num) {
+void search_bool(struct table *table_given, int field_num) {
     struct bool_field *field = table_given->booleanfields[field_num];
     int i;
     bool value_to_search;
@@ -87,8 +83,7 @@ search_bool(struct table *table_given, int field_num) {
     }
 }
 
-void
-search_float(struct table *table_given, int field_num) {
+void search_float(struct table *table_given, int field_num) {
     struct float_field *field = table_given->floatingfields[field_num];
     int i;
     float value_to_search;
@@ -102,8 +97,7 @@ search_float(struct table *table_given, int field_num) {
     }
 }
 
-void
-search(struct table *table_given) {
+void search(struct table *table_given) {
     char field_to_search[32];
     int i = 0;
     printf("\nEnter the field you would like to search for: ");
@@ -132,8 +126,7 @@ search(struct table *table_given) {
     }
 }
 
-void
-print_all(struct table *table_given) {
+void print_all(struct table *table_given) {
     int i;
     int n;
     for (i = 0; i < table_given->num_of_records; i++) {

@@ -111,8 +111,7 @@ void save(struct table *table_given) {
 }
 
 // function to open a file as the current table
-struct table *
-open() {
+struct table *open() {
     // variable to store filename
     char filename[128];
     // variable to store the table beign generated
@@ -221,8 +220,7 @@ open() {
 }
 
 // this function is used to delete a table and clear its information
-void
-clear_table(struct table *table_given) {
+void clear_table(struct table *table_given) {
     // incrementor variable
     int i;
     // for every field of type string
